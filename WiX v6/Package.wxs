@@ -1,0 +1,11 @@
+﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+    <Package Id="MikeWilliams.WiX.V6" Name="WiX v6 Sample" Manufacturer="Mike Williams" Version="1.0.0.0">
+        <MajorUpgrade DowngradeErrorMessage="A newer version of WiX v6 Sample is already installed." />
+
+        <Media Id="1" Cabinet="product.cab" EmbedCab="yes" CompressionLevel="high" />
+
+        <Feature Id="Main">
+            <ComponentGroupRef Id="ExampleComponents" />
+        </Feature>
+    </Package>
+</Wix>
