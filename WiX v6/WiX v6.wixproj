@@ -1,10 +1,11 @@
 ﻿<Project Sdk="WixToolset.Sdk/6.0.0">
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
-  </PropertyGroup>
-  <PropertyGroup>
-    <OutputName>WiX v6 Sample</OutputName>
-  </PropertyGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\HelloWorld\HelloWorld.csproj" />
-  </ItemGroup>
+    <PropertyGroup>
+        <Configurations>Debug;Release;Setup;Vso-Ci</Configurations>
+    </PropertyGroup>
+    <PropertyGroup>
+        <OutputName>WiX v6 Sample</OutputName>
+    </PropertyGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\HelloWorld\HelloWorld.csproj" />
+    </ItemGroup>
 </Project>
