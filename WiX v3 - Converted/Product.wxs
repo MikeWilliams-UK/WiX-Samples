@@ -1,28 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
-    <Product Id="*" Name="WiX v3 Sample" Language="1033" Version="1.0.0.0" Manufacturer="Mike Williams" UpgradeCode="84609e21-8945-4131-9483-b4567929bfd4">
-        <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
-
+﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+    <Package Name="WiX v3 Sample" Language="1033" Version="1.0.0.0" Manufacturer="Mike Williams" UpgradeCode="84609e21-8945-4131-9483-b4567929bfd4" InstallerVersion="200">
         <MajorUpgrade DowngradeErrorMessage="A newer version of WiX v3 Sample is already installed." />
-
         <Media Id="1" Cabinet="product.cab" EmbedCab="yes" CompressionLevel="high" />
-
         <Feature Id="ProductFeature" Title="WiX v3 Sample" Level="1">
             <ComponentGroupRef Id="ProductComponents" />
         </Feature>
-    </Product>
+    </Package>
 
     <Fragment>
-        <Directory Id="TARGETDIR" Name="SourceDir">
-            <Directory Id="ProgramFilesFolder">
-                <Directory Id="INSTALLFOLDER" Name="WiX v3 Sample" />
-            </Directory>
-        </Directory>
+        <StandardDirectory Id="ProgramFilesFolder">
+            <Directory Id="INSTALLFOLDER" Name="WiX v3 Sample" />
+        </StandardDirectory>
     </Fragment>
 
     <Fragment>
         <ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
-            <Component Id="HelloWorld.exe" Guid="*">
+            <Component Id="HelloWorld.exe">
                 <File Id="HelloWorld.exe" Name="HelloWorld.exe" Source="$(var.HelloWorld.TargetDir)HelloWorld.exe" />
             </Component>
         </ComponentGroup>
