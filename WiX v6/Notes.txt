@@ -1,0 +1,2 @@
+Source of dialogues :-
+https://github.com/wixtoolset/wix/tree/ffbfeb3c0b9cb8084bd366404c0cb06d42e8caaf/src/ext/UI/wixlib

@@ -1,9 +1,19 @@
 ﻿<Project Sdk="WixToolset.Sdk/6.0.0">
-    <PropertyGroup>
-        <Configurations>Debug;Release;Setup;Vso-Ci</Configurations>
-        <OutputName>WiX v6 Sample</OutputName>
-    </PropertyGroup>
-    <ItemGroup>
-        <ProjectReference Include="..\HelloWorld\HelloWorld.csproj" />
-    </ItemGroup>
+  <PropertyGroup>
+    <Configurations>Debug;Release;Setup;Vso-Ci</Configurations>
+    <OutputName>WiX v6 Sample</OutputName>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Notes.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Install.cmd" />
+    <None Include="UnInstall.cmd" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="WixToolset.UI.wixext" Version="6.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HelloWorld\HelloWorld.csproj" />
+  </ItemGroup>
 </Project>
