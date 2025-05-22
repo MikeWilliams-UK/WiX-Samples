@@ -9,7 +9,6 @@
         </Feature>
 
         <UI Id="UserInterface">
-            <Property Id="WIXUI_INSTALLDIR" Value="TARGETDIR" />
             <Property Id="WixUI_Mode" Value="Custom" />
 
             <TextStyle Id="WixUI_Font_Normal" FaceName="Tahoma" Size="8" />
@@ -26,8 +25,8 @@
 
             <Publish Dialog="ExitDialog" Control="Finish" Event="EndDialog" Value="Return" Order="999"/>
             <Publish Dialog="WelcomeDlg" Control="Next" Event="EndDialog" Value="Return" Order="2"></Publish>
-
         </UI>
+
         <UIRef Id="WixUI_Common" />
     </Package>
 </Wix>
